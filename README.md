@@ -104,21 +104,21 @@ Sample starters/howsitgoing.js
 module.exports = {
 	script0: ["How's it going?"],
 	script1: function()
-  {
-    if(this.profile.mood)
-    {
-      this.pass("I'm feeling " + this.profile.mood + " too");
-    }
-    else
-    {
-      this.fail("How are you feeling?", mood);
-    }
-  },
+	{
+		if(this.profile.mood)
+		{
+			this.pass("I'm feeling " + this.profile.mood + " too");
+		}
+		else
+		{
+			this.fail("How are you feeling?", mood);
+		}
+	},
 	repeats: false,
 	starter: true,
 	flipper: false,
-  priority: 2,
-  time: "Monday-Sunday 0800-1000"
+	priority: 2,
+	time: "Monday-Sunday 0800-1000"
 }
 ```
 
