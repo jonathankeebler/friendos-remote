@@ -57,7 +57,7 @@ $ node app.js
 
 ## Required Files
 
-### intents.csv
+### **intents.csv**
 Each row contains a sample phrase, a comma, then the Library module that will be executed when that phrase is detected.
 
 Sample intents.csv:
@@ -67,7 +67,7 @@ Can you say hello to me?,hello
 ```
 
 
-### Library/
+### **Library/**
 Sample 1 library/hello.js
 ```js
 module.exports = {
@@ -79,6 +79,48 @@ module.exports = {
 };
 ```
 
+Sample 2 library/hello.js
+```js
+module.exports = {
+	solve: function()
+	{
+		if(true)
+		{
+			this.pass("Hi!");
+		}
+		else
+		{
+			this.fail("Why did you ask me that?");
+		}
+		
+	}
+};
+```
+
+### **Starters**
+
+Sample starters/howsitgoing.js
+```js
+module.exports = {
+	script0: ["How's it going?"],
+	script1: function()
+  {
+    if(this.profile.mood)
+    {
+      this.pass("I'm feeling " + this.profile.mood + " too");
+    }
+    else
+    {
+      this.fail("How are you feeling?", mood);
+    }
+  },
+	repeats: false,
+	starter: true,
+	flipper: false,
+  priority: 2,
+  time: "Monday-Sunday 0800-1000"
+}
+```
 
 ## License
 
