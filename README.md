@@ -127,4 +127,4 @@ module.exports = {
 
 ## License
 
-  [MIT](LICENSE)
+  [GPLv3](LICENSE)
