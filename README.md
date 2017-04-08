@@ -3,7 +3,7 @@
   An operating system that just might be your friend
 
 ## Requirements
-- node v4.x running on Linux
+- node v4.x
 
 ## Usage
 **You must create the following files in your project:**

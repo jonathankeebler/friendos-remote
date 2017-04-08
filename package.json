@@ -20,5 +20,5 @@
     "superagent": "^3.5.2"
   },
   "engines" : { "node" : "4.*" },
-  "os" : ["linux"]
+  "os" : ["darwin", "linux"]
 }
