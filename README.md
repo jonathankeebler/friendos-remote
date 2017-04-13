@@ -15,7 +15,7 @@ var FriendOS = require("friendos-remote");
 
 var app = new FriendOS({
     license: "YOUR_LICENSE_KEY",
-	remote: "http://friendos-remote.friendlybotinc.com:8081"
+    remote: "http://friendos-remote.friendlybotinc.com:8081"
 });
 
 app.start(); 
@@ -41,13 +41,19 @@ Install the library
 $ npm install friendos-remote
 ```
 
-Create your app.js
+Install some sample modules and their requires
+```bash
+$ cp node_modules/friendos-remote/library/* library/ && cp node_modules/friendos-remote/starters/* starters/ && npm install superagent --save && cp node_modules/friendos-remote/intents.csv intents.csv
+```
+
+Create your /app.js
 
 ```js
 var FriendOS = require("friendos-remote");
 
 var app = new FriendOS({
-    license: "YOUR_LICENSE_KEY"
+    license: "YOUR_LICENSE_KEY",
+    remote: "http://friendos-remote.friendlybotinc.com:8081"
 });
 
 app.start(); 
@@ -58,6 +64,8 @@ app.start();
 ```bash
 $ node app.js
 ```
+
+Go to [localhost:8000/cma.html](http://localhost:8000/cma.html) and say "Hi"
 
 ## Required Files
 
