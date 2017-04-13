@@ -14,7 +14,8 @@
 var FriendOS = require("friendos-remote");
 
 var app = new FriendOS({
-    license: "YOUR_LICENSE_KEY"
+    license: "YOUR_LICENSE_KEY",
+	remote: "http://friendos-remote.friendlybotinc.com:8081"
 });
 
 app.start(); 
