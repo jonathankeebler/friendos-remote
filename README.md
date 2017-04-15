@@ -98,11 +98,11 @@ module.exports = {
 	{
 		if(true)
 		{
-			this.pass("Hi!");
+			this.pass({ out: "Hi!" });
 		}
 		else
 		{
-			this.fail("Why did you ask me that?");
+			this.fail({ out: "Why did you ask me that?" });
 		}
 		
 	}
@@ -123,7 +123,7 @@ module.exports = {
 		}
 		else
 		{
-			this.fail("How are you feeling?", mood);
+			this.fail("How are you feeling?", "mood");
 		}
 	},
 	repeats: false,
