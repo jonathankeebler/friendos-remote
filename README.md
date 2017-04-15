@@ -6,10 +6,6 @@
 - node v4.x
 
 ## Usage
-**You must create the following files in your project:**
-- library/
-- starters/
-- intents.csv
 ```js
 var FriendOS = require("friendos-remote");
 
@@ -20,6 +16,10 @@ var app = new FriendOS({
 
 app.start(); 
 ```
+**You must create the following directories and files in your project:**
+- library/ *(must contain at least 1 module)*
+- starters/ *(must contain at least 1 module)*
+- intents.csv
 
 ## Installation
 
@@ -29,21 +29,21 @@ $ npm install friendos-remote
 
 ## Quick Start
 
-Create the necessary files
+Create your package.json
 
 ```bash
-$ mkdir library && mkdir starters && touch intents.csv
+$ npm init
 ```
 
 Install the library
 
 ```bash
-$ npm install friendos-remote
+$ npm install friendos-remote --save
 ```
 
 Install some sample modules and their requires
 ```bash
-$ cp node_modules/friendos-remote/library/* library/ && cp node_modules/friendos-remote/starters/* starters/ && npm install superagent --save && cp node_modules/friendos-remote/intents.csv intents.csv
+$ bash ./node_modules/friendos-remote/scripts/setup.sh
 ```
 
 Create your /app.js
