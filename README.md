@@ -164,6 +164,32 @@ module.exports = {
 
 **time:** This is when you would like the starter to run. You can include, just says of the week, just times of day, or both. The time uses a 24 hour clock. If no time is set, the starter can run any time a starter is required and will be selected randomly taking into consideration the priority of other starters available at that time, on that day.
 
+### **Profiles**
+
+You can save information to a user's profile, and retrieve it for use whenever you like. You can also create starters that act differently based on the information in the user's profile.
+
+In this example, the starter looks up the name in the profile and uses it in the output, if it doesn't have the name, it asks for it and stores it using **,"name"** after the output.
+
+```
+module.exports = {
+	script: function()
+	{
+		if(this.profile.name)
+		{
+			this.pass("Nice to meet you, " + this.profile.name);
+		}
+		else
+		{
+			this.fail("What's your name?", "name");
+		}
+	},
+	repeats: false,
+	flipper: true,
+	starter: false,
+	priority: 0
+}
+```
+
 ## License
 
   [GPLv3](LICENSE)
