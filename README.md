@@ -103,15 +103,18 @@ module.exports = {
 **Sample 2 library/hello.js**
 ```js
 module.exports = {
+	entities: {
+		required: ["name"]
+	},
 	solve: function()
 	{
 		if(true)
 		{
-			this.pass({ out: "Hi!" });
+			this.pass({ out: "Hi, " + name + "!" });
 		}
 		else
 		{
-			this.fail({ out: "Why did you ask me that?" });
+			this.fail({ out: "Hi!" });
 		}
 		
 	}
